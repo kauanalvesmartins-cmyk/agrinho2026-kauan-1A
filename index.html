@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criando Trigo</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Source+Sans+3:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#2d1b69',
+            deepblue: '#1a237e',
+            midblue: '#3949ab',
+            lightpurple: '#7c4dff',
+            softblue: '#e8eaf6'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'Source Sans 3', sans-serif; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-fade-up { animation: fadeUp 0.8s ease-out forwards; }
+    .delay-1 { animation-delay: 0.2s; opacity: 0; }
+    .delay-2 { animation-delay: 0.4s; opacity: 0; }
+    .delay-3 { animation-delay: 0.6s; opacity: 0; }
+    .wheat-pattern { background-image: radial-gradient(circle at 20% 50%, rgba(124,77,255,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(57,73,171,0.08) 0%, transparent 50%); }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ <script src="/_sdk/telemetry_sdk.js"></script></head>
+ <body class="h-full font-body bg-softblue overflow-auto">
+  <div id="app" class="w-full h-full"><!-- Navigation -->
+   <nav class="fixed top-0 w-full z-50 bg-royal/95 backdrop-blur-sm shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+     <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-to-br from-lightpurple to-midblue flex items-center justify-center"><span class="text-white text-lg">🌾</span>
+      </div><span id="nav-title" class="font-display text-xl font-bold text-white">Criando Trigo</span>
+     </div>
+     <div class="hidden md:flex gap-8 text-white/80 text-sm font-semibold"><a href="#inicio" class="hover:text-lightpurple transition">Início</a> <a href="#sobre" class="hover:text-lightpurple transition">Sobre</a> <a href="#producao" class="hover:text-lightpurple transition">Produção</a> <a href="#sustentabilidade" class="hover:text-lightpurple transition">Sustentabilidade</a> <a href="#contato" class="hover:text-lightpurple transition">Contato</a>
+     </div>
+    </div>
+   </nav><!-- Hero -->
+   <section id="inicio" class="relative pt-32 pb-24 px-6 bg-gradient-to-br from-royal via-deepblue to-midblue overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+     <div class="absolute top-20 left-10 w-64 h-64 rounded-full bg-lightpurple blur-3xl"></div>
+     <div class="absolute bottom-10 right-20 w-80 h-80 rounded-full bg-midblue blur-3xl"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto text-center">
+     <div class="animate-fade-up"><span class="text-6xl mb-6 block animate-float">🌾</span>
+      <h1 id="hero-title" class="font-display text-5xl md:text-7xl font-900 text-white mb-4">Criando Trigo</h1>
+      <p id="hero-subtitle" class="text-xl md:text-2xl text-lightpurple font-light mb-6">Agro Forte, Futuro Sustentável</p>
+      <p class="text-white/70 text-lg max-w-2xl mx-auto">Equilíbrio entre produção e meio ambiente para alimentar o mundo de forma responsável.</p>
+     </div>
+     <div class="mt-12 flex justify-center gap-4 flex-wrap animate-fade-up delay-1"><a href="#producao" class="px-8 py-3 bg-lightpurple hover:bg-purple-500 text-white rounded-full font-semibold transition shadow-lg shadow-purple-900/30">Conheça Nossa Produção</a> <a href="#sustentabilidade" class="px-8 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition">Sustentabilidade</a>
+     </div>
+    </div>
+   </section><!-- Stats -->
+   <section class="py-16 px-6 bg-white wheat-pattern">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+     <div class="animate-fade-up delay-1">
+      <p class="text-3xl font-bold text-royal">150+</p>
+      <p class="text-sm text-gray-600 mt-1">Hectares Cultivados</p>
+     </div>
+     <div class="animate-fade-up delay-2">
+      <p class="text-3xl font-bold text-royal">98%</p>
+      <p class="text-sm text-gray-600 mt-1">Eficiência Hídrica</p>
+     </div>
+     <div class="animate-fade-up delay-1">
+      <p class="text-3xl font-bold text-royal">30%</p>
+      <p class="text-sm text-gray-600 mt-1">Menos Agrotóxicos</p>
+     </div>
+     <div class="animate-fade-up delay-2">
+      <p class="text-3xl font-bold text-royal">5 ton</p>
+      <p class="text-sm text-gray-600 mt-1">Produção/Hectare</p>
+     </div>
+    </div>
+   </section><!-- Sobre -->
+   <section id="sobre" class="py-20 px-6 bg-softblue">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+     <div>
+      <h2 class="font-display text-4xl font-bold text-royal mb-6">Sobre o Projeto</h2>
+      <p id="about-text" class="text-gray-700 leading-relaxed text-lg mb-4">O Criando Trigo nasceu da convicção de que é possível produzir alimentos de qualidade em harmonia com o meio ambiente. Nosso foco é a triticultura sustentável — cultivar trigo com técnicas modernas que respeitam o solo, a água e a biodiversidade.</p>
+      <p class="text-gray-600 leading-relaxed">Acreditamos que o agronegócio forte é aquele que garante produtividade hoje sem comprometer os recursos de amanhã.</p>
+     </div>
+     <div class="bg-gradient-to-br from-royal to-midblue rounded-3xl p-10 text-center shadow-2xl"><span class="text-7xl block mb-4">🌱</span>
+      <p class="text-white font-display text-2xl font-bold">Produção Consciente</p>
+      <p class="text-white/70 mt-2">Cada grão cultivado com responsabilidade</p>
+     </div>
+    </div>
+   </section><!-- Produção -->
+   <section id="producao" class="py-20 px-6 bg-white wheat-pattern">
+    <div class="max-w-5xl mx-auto text-center mb-14">
+     <h2 class="font-display text-4xl font-bold text-royal mb-4">Produção de Trigo</h2>
+     <p class="text-gray-600 max-w-2xl mx-auto">Do plantio à colheita, cada etapa é planejada para maximizar a qualidade e minimizar o impacto ambiental.</p>
+    </div>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+     <div class="bg-gradient-to-b from-softblue to-white rounded-2xl p-8 border border-indigo-100 shadow-sm hover:shadow-xl transition animate-fade-up delay-1">
+      <div class="w-14 h-14 bg-royal/10 rounded-xl flex items-center justify-center mb-4">
+       <span class="text-2xl">🌍</span>
+      </div>
+      <h3 class="font-display text-xl font-bold text-royal mb-2">Preparo do Solo</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">Análise completa do solo, rotação de culturas e plantio direto para manter a saúde da terra e sua microbiota.</p>
+     </div>
+     <div class="bg-gradient-to-b from-softblue to-white rounded-2xl p-8 border border-indigo-100 shadow-sm hover:shadow-xl transition animate-fade-up delay-2">
+      <div class="w-14 h-14 bg-royal/10 rounded-xl flex items-center justify-center mb-4">
+       <span class="text-2xl">💧</span>
+      </div>
+      <h3 class="font-display text-xl font-bold text-royal mb-2">Irrigação Inteligente</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">Sistemas de irrigação por gotejamento com sensores que economizam até 40% de água comparado aos métodos tradicionais.</p>
+     </div>
+     <div class="bg-gradient-to-b from-softblue to-white rounded-2xl p-8 border border-indigo-100 shadow-sm hover:shadow-xl transition animate-fade-up delay-3">
+      <div class="w-14 h-14 bg-royal/10 rounded-xl flex items-center justify-center mb-4">
+       <span class="text-2xl">🌾</span>
+      </div>
+      <h3 class="font-display text-xl font-bold text-royal mb-2">Colheita &amp; Qualidade</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">Monitoramento constante da maturação e colheita no ponto ideal para garantir grãos com máximo valor nutricional.</p>
+     </div>
+    </div>
+   </section><!-- Sustentabilidade -->
+   <section id="sustentabilidade" class="py-20 px-6 bg-gradient-to-br from-royal to-deepblue">
+    <div class="max-w-5xl mx-auto text-center mb-14">
+     <h2 class="font-display text-4xl font-bold text-white mb-4">Sustentabilidade</h2>
+     <p class="text-white/70 max-w-2xl mx-auto">Nosso compromisso com o meio ambiente guia cada decisão no campo.</p>
+    </div>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+     <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+      <div class="flex items-center gap-3 mb-4"><i data-lucide="leaf" class="text-lightpurple w-6 h-6"></i>
+       <h3 class="text-white font-bold text-lg">Manejo Integrado de Pragas</h3>
+      </div>
+      <p class="text-white/70 text-sm leading-relaxed">Utilizamos controle biológico e técnicas integradas para reduzir em 30% o uso de defensivos químicos.</p>
+     </div>
+     <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+      <div class="flex items-center gap-3 mb-4"><i data-lucide="droplets" class="text-lightpurple w-6 h-6"></i>
+       <h3 class="text-white font-bold text-lg">Conservação da Água</h3>
+      </div>
+      <p class="text-white/70 text-sm leading-relaxed">Captação de água da chuva e reuso de recursos hídricos para irrigação consciente.</p>
+     </div>
+     <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+      <div class="flex items-center gap-3 mb-4"><i data-lucide="trees" class="text-lightpurple w-6 h-6"></i>
+       <h3 class="text-white font-bold text-lg">Preservação de APPs</h3>
+      </div>
+      <p class="text-white/70 text-sm leading-relaxed">Manutenção e recuperação de áreas de preservação permanente ao redor das lavouras.</p>
+     </div>
+     <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+      <div class="flex items-center gap-3 mb-4"><i data-lucide="recycle" class="text-lightpurple w-6 h-6"></i>
+       <h3 class="text-white font-bold text-lg">Economia Circular</h3>
+      </div>
+      <p class="text-white/70 text-sm leading-relaxed">Resíduos da produção são reaproveitados como adubo orgânico, fechando o ciclo produtivo.</p>
+     </div>
+    </div>
+   </section><!-- Contato -->
+   <section id="contato" class="py-20 px-6 bg-softblue">
+    <div class="max-w-3xl mx-auto text-center">
+     <h2 class="font-display text-4xl font-bold text-royal mb-4">Entre em Contato</h2>
+     <p class="text-gray-600 mb-10">Quer saber mais sobre nossa produção sustentável de trigo? Fale conosco.</p>
+     <form id="contact-form" class="bg-white rounded-2xl p-8 shadow-xl text-left space-y-5">
+      <div><label for="name" class="block text-sm font-semibold text-royal mb-1">Nome</label> <input id="name" type="text" class="w-full px-4 py-3 border border-indigo-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-lightpurple" placeholder="Seu nome">
+      </div>
+      <div><label for="email" class="block text-sm font-semibold text-royal mb-1">E-mail</label> <input id="email" type="email" class="w-full px-4 py-3 border border-indigo-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-lightpurple" placeholder="seu@email.com">
+      </div>
+      <div><label for="message" class="block text-sm font-semibold text-royal mb-1">Mensagem</label> <textarea id="message" rows="4" class="w-full px-4 py-3 border border-indigo-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-lightpurple resize-none" placeholder="Sua mensagem..."></textarea>
+      </div><button type="submit" class="w-full py-3 bg-gradient-to-r from-royal to-lightpurple text-white font-bold rounded-xl hover:opacity-90 transition shadow-lg">Enviar Mensagem</button>
+      <p id="form-success" class="hidden text-green-600 text-center font-semibold mt-2">✓ Mensagem enviada com sucesso!</p>
+     </form>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-royal py-10 px-6 text-center">
+    <p class="text-white/60 text-sm">© 2024 Criando Trigo — Agro Forte, Futuro Sustentável</p>
+    <p class="text-white/40 text-xs mt-2">Equilíbrio entre produção e meio ambiente 🌾</p>
+   </footer>
+  </div>
+  <script>
+  lucide.createIcons();
+
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('form-success').classList.remove('hidden');
+    e.target.reset();
+    setTimeout(() => document.getElementById('form-success').classList.add('hidden'), 3000);
+  });
+
+  // Element SDK
+  const defaultConfig = {
+    site_title: 'Criando Trigo',
+    hero_subtitle: 'Agro Forte, Futuro Sustentável',
+    about_text: 'O Criando Trigo nasceu da convicção de que é possível produzir alimentos de qualidade em harmonia com o meio ambiente. Nosso foco é a triticultura sustentável — cultivar trigo com técnicas modernas que respeitam o solo, a água e a biodiversidade.',
+    background_color: '#2d1b69',
+    surface_color: '#e8eaf6',
+    text_color: '#1a237e',
+    primary_action_color: '#7c4dff',
+    secondary_action_color: '#3949ab',
+    font_family: 'Playfair Display',
+    font_size: 16
+  };
+
+  async function onConfigChange(config) {
+    const title = config.site_title || defaultConfig.site_title;
+    const subtitle = config.hero_subtitle || defaultConfig.hero_subtitle;
+    const about = config.about_text || defaultConfig.about_text;
+    const font = config.font_family || defaultConfig.font_family;
+    const size = config.font_size || defaultConfig.font_size;
+
+    document.getElementById('nav-title').textContent = title;
+    document.getElementById('hero-title').textContent = title;
+    document.getElementById('hero-subtitle').textContent = subtitle;
+    document.getElementById('about-text').textContent = about;
+
+    // Font
+    const displayEls = document.querySelectorAll('.font-display');
+    displayEls.forEach(el => el.style.fontFamily = `${font}, serif`);
+
+    // Font size
+    document.getElementById('hero-title').style.fontSize = `${size * 3.5}px`;
+    document.getElementById('hero-subtitle').style.fontSize = `${size * 1.4}px`;
+
+    // Colors
+    const bg = config.background_color || defaultConfig.background_color;
+    const surface = config.surface_color || defaultConfig.surface_color;
+    const text = config.text_color || defaultConfig.text_color;
+    const primary = config.primary_action_color || defaultConfig.primary_action_color;
+    const secondary = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+    document.querySelector('nav').style.backgroundColor = bg + 'f2';
+    document.querySelector('footer').style.backgroundColor = bg;
+    document.getElementById('inicio').style.background = `linear-gradient(135deg, ${bg}, ${text}, ${secondary})`;
+    document.getElementById('sustentabilidade').style.background = `linear-gradient(135deg, ${bg}, ${text})`;
+
+    document.querySelectorAll('[data-recolor-surface]').forEach(el => el.style.backgroundColor = surface);
+    document.getElementById('sobre').style.backgroundColor = surface;
+    document.getElementById('contato').style.backgroundColor = surface;
+  }
+
+  window.elementSdk.init({
+    defaultConfig,
+    onConfigChange,
+    mapToCapabilities: (config) => ({
+      recolorables: [
+        { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+        { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+        { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+        { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: (v) => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
+        { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: (v) => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } }
+      ],
+      borderables: [],
+      fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+      fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
+    }),
+    mapToEditPanelValues: (config) => new Map([
+      ['site_title', config.site_title || defaultConfig.site_title],
+      ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+      ['about_text', config.about_text || defaultConfig.about_text]
+    ])
+  });
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a05721f60bbf255e',t:'MTc4MDQxMDM4MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
